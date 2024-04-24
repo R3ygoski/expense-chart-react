@@ -1,0 +1,145 @@
+@use './var' as v;
+
+.card {
+    width: clamp(310px, 90%, 542px);
+    &__stats {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        padding: 1.5rem 1.25rem;
+        border-radius: 0.5rem;
+        background: v.$very-pale-orange;
+        h2 {
+            font-size: 1.5rem;
+            color: v.$dark-brown;
+        }
+        &__bars-section {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 252px;
+            .bars {
+                transition: height 0.3s;
+                background: v.$soft-red;
+            }
+            .bars-today {
+                transition: height 0.3s;
+                background: v.$cyan;
+            }
+            .bars, .bars-today {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                width: 34px;
+                margin-bottom: 3.2rem;
+                border-radius: 0.25rem;
+                cursor: pointer;
+                transition: 0.5s;
+                &:hover {
+                    filter: brightness(115%) saturate(50%);
+                }
+                &__info {
+                    position: absolute;
+                    top: 0px;
+                    padding: 0.25rem;
+                    border-radius: 0.25rem;
+                    font-weight: 700;
+                    background: v.$dark-brown;
+                    color: v.$cream;
+                    font-size: 0.9rem;
+                    filter: opacity(0);
+                    transition: filter 0.3s, top 0.3s;
+                }
+                &:hover .bars__info {
+                    position: absolute;
+                    top: -32px;
+                    filter: opacity(1);
+                }
+                &__day, &__day--bold {
+                    position: absolute;
+                    bottom: -32px;
+                    font-size: 0.9375rem;
+                    color: v.$medium-brown;
+                }
+                &__day--bold {
+                    font-weight: 700;
+                }
+            }
+        }
+        &__expense {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1.5rem;
+            div:nth-child(1){
+                h3 {
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    color: v.$medium-brown;
+                }
+                p {
+                    margin-top: 0.25rem;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: v.$dark-brown;
+                }
+            }
+            div:nth-child(2){
+                margin-top: 1.35rem;
+                text-align: right;
+                p:nth-child(1) {
+                    color: v.$dark-brown;
+                }
+                p:nth-child(2) {
+                    color: v.$medium-brown;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .card {
+        &__stats {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            padding: 2.25rem 2.5rem;
+            border-radius: 1rem;
+            height: 500px;
+            h2 {
+                font-size: 2rem;
+            }
+            &__bars-section {
+                padding-bottom: 1.5rem;
+                .bars, .bars-today {
+                    width: 52px;
+                    margin-bottom: 2.25rem;
+                    border-radius: 0.5rem;
+                    &__info {
+                        font-size: 1rem;
+                    }
+                }
+            }
+            &__expense {
+                padding-top: 3.325rem;
+                div:nth-child(1){
+                    h3 {
+                        font-size: 1.2rem;
+                    }
+                    p {
+                        font-size: 3rem;
+                    }
+                }
+                div:nth-child(2){
+                    margin-top: 2.2rem;
+                    p:nth-child(1){
+                        font-size: 1.125rem;
+                    }
+                    p:nth-child(2){
+                        font-size: 1.125rem;
+                    }
+                }
+            }
+        }
+    }   
+}

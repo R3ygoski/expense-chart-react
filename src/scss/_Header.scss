@@ -1,0 +1,50 @@
+@use './var' as v;
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+    margin-top: 3.25rem;
+    padding: 1.25rem 0.8rem 1.25rem 1.25rem;
+    border-radius: 0.5rem;
+    background: v.$soft-red;
+    color: v.$cream;
+    &__wrapper {
+        h1 {
+            font-size: 0.9rem;
+        }
+        p {
+            margin-top: 0.2rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+    &__image {
+        img {
+            margin-top: 0.5rem;
+            width: 82.5%;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .card__header {
+        height: 8rem;
+        margin-top: 0;
+        padding: 2rem 2.5rem 2rem 2.15rem;
+        border-radius: 1.25rem;
+        &__wrapper {
+            h1 {
+                font-size: 1.125rem;
+            }
+            p {
+                font-size: 2rem;
+            }
+        }
+        &__image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

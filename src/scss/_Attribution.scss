@@ -1,0 +1,12 @@
+@use './var' as v;
+.attribution {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+    color: v.$medium-brown;
+    a {
+        text-decoration: none;
+        color: v.$dark-brown;
+    }
+}

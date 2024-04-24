@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Github](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/expense-chart-made-with-react-and-sass-2ZjCbuNzz5)
+- Live Site URL: [Github](https://r3ygoski.github.io/expense-chart-react/)
 
 ## My process
 
